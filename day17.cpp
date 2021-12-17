@@ -14,15 +14,15 @@ int simulate(int dx, int dy) {
 }
 
 int main() {
-  int p1 = 0, p2 = 0;
+  int f1 = 0, f2 = 0;
   for(int y = ly; y <= -ly; y++) {
     for(int x = 0; x <= hx; x++) {
       int res = simulate(x, y);
       if(res != -1) {
-        if(res > p1) p1 = res;
-        p2++;
+        if(res > f1) f1 = res;
+        f2++;
       }
     }
   }
-  std::cout << p1 << " " << p2;
+  std::cout << f1 << " " << f2;
 }
