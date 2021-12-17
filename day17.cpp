@@ -2,7 +2,7 @@
 
 int lx = 282, hx = 314, ly = -80, hy = -45;
 
-int simulate(int dx, int dy) {
+int checkIfHit(int dx, int dy) {
   int x = 0, y = 0, sol = 0;
   while(x <= hx && y >= ly) {
     x += dx; if(dx) dx--;
@@ -17,7 +17,7 @@ int main() {
   int f1 = 0, f2 = 0;
   for(int y = ly; y <= -ly; y++) {
     for(int x = 0; x <= hx; x++) {
-      int res = simulate(x, y);
+      int res = checkIfHit(x, y);
       if(res != -1) {
         if(res > f1) f1 = res;
         f2++;
